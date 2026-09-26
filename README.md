@@ -85,9 +85,9 @@ Token is stored client-side and sent with subsequent requests
 Socket.io connection is authenticated using the same token, enabling real-time features per user
 📸 Screenshots
 
-Add screenshots or a GIF of the app here to give visitors a quick preview.
 
-![Nexus Chat Screenshot](./screenshots/chat-preview.png)
+
+
 🗺️ Roadmap
  Group chats
  Media/file sharing
@@ -95,16 +95,10 @@ Add screenshots or a GIF of the app here to give visitors a quick preview.
  Push notifications
 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome. Feel free to check the issues page.
-
-📄 License
-
-This project is licensed under the MIT License — see the LICENSE file for details.
-
 👤 Author
 
 Daksh
 
-GitHub: @your-username
+GitHub: daksh533
 
 ⭐️ If you like this project, consider giving it a star on GitHub!
