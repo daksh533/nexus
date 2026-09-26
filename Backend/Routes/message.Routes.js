@@ -8,7 +8,7 @@ const router = express.Router();
 router.get("/:id",protectRoute,getMessages); // get message
 router.post("/send/:id",protectRoute,sendMessage); // send message
  
-
+// 
 
 
 export default router; // export the router

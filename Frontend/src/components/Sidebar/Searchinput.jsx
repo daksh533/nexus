@@ -1,25 +1,4 @@
-// import {useState} from 'react';
-// import { IoSearchSharp } from "react-icons/io5";
 
-// const Searchinput = () => {
-// const [search, setSearch] = useState('')
-
-
-
-// let handlesubmit = (e) => { 
-//   e.preventDefault();
-// }
-//   return (
-//    <form onSubmit={handlesubmit} className="flex gap-2 items-center">
-//     <input type="text" placeholder="Search" className="input input-bordered rounded-full"  value={search} onChange={(e)=>setSearch(e.target.value)}/>
-//     <button type="submit" className="btn btn-circle btn-ghost hover:bg-sky-400">
-//     <IoSearchSharp className="w-6 h-6 outline-none text-white" />
-//     </button>
-//    </form>
-//   )
-// }
-
-// export default Searchinput
 
 
 

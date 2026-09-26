@@ -19,3 +19,4 @@ export const getUserForSidebar = async (req, res) => {
         res.status(500).json({error: "error in usercontroller "});
     }
 };
+// 

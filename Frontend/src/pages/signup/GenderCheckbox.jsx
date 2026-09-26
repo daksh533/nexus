@@ -53,26 +53,3 @@ export default GenderCheckbox;
 //                     <input
 //                         type="radio"
 //                         name="gender"
-//                         value="male"
-//                         checked={selectedGender === 'male'}
-//                         onChange={() => setSelectedGender('male')}
-//                         className="radio radio-primary ml-2"
-//                     />
-//                 </label>
-//                 <label className="label cursor-pointer">
-//                     <span className="label-text">Female</span>
-//                     <input
-//                         type="radio"
-//                         name="gender"
-//                         value="female"
-//                         checked={selectedGender === 'female'}
-//                         onChange={() => setSelectedGender('female')}
-//                         className="radio radio-primary ml-2"
-//                     />
-//                 </label>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default GenderCheckbox;

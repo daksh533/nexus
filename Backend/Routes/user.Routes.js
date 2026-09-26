@@ -8,7 +8,7 @@ router.get("/", protectRoute,getUserForSidebar); // get all users
 
 
 
-
+// 
 
 
 export default router; // export the router
