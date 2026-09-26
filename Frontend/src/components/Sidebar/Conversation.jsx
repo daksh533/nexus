@@ -1,8 +1,7 @@
 import useConversation from "../../zustand/useConversation.js";
 import { useSocketContext } from "../../context/Socketcontext.jsx";
 
-const DEFAULT_PROFILE_PIC =
-  "https://avatar.iran.liara.run/public/boy?username=default";
+const DEFAULT_PROFILE_PIC = "/default-avatar.svg";
 
 const Conversation = ({ conversation, lastidx, key }) => {
   const { selectedConversation, setSelectedConversation } = useConversation();
