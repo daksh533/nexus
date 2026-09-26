@@ -1,8 +1,6 @@
-
 // import {useAuthContext} from "../../context/AuthContext";
 
 // import useConversation from "../../zustand/useConversation";
-
 
 // const Message = ({message}) => {
 
@@ -34,34 +32,43 @@ import { useAuthContext } from "../../context/AuthContext";
 // import { extractTime } from "../../utils/extractTime";
 import useConversation from "../../zustand/useConversation";
 
-const Message = ({ message ,key}) => {
+const DEFAULT_PROFILE_PIC =
+  "https://avatar.iran.liara.run/public/boy?username=default";
 
-	const { authuser } = useAuthContext();
-	const { selectedConversation } = useConversation();
-	// const fromMe = message.senderId === authuser._id;
-	const fromMe = message.senderId?.toString() === authuser._id?.toString();
+const Message = ({ message, key }) => {
+  const { authuser } = useAuthContext();
+  const { selectedConversation } = useConversation();
+  // const fromMe = message.senderId === authuser._id;
+  const fromMe = message.senderId?.toString() === authuser._id?.toString();
 
+  const chatClassName = fromMe ? "chat-end" : "chat-start";
 
+  const profilePic = fromMe
+    ? authuser?.profilePic
+    : selectedConversation?.profilePic;
+  const bubbleBgColor = fromMe ? "bg-blue-500" : "";
 
-
-	
-	const chatClassName = fromMe ? "chat-end" : "chat-start";
-	
-	const profilePic = fromMe ? authuser.profilePic : selectedConversation?.profilePic;
-	const bubbleBgColor = fromMe ? "bg-blue-500" : "";
-
-
-
-	return (
-		<div className={`chat ${chatClassName}`}>
-			<div className='chat-image avatar'>
-				<div className='w-10 rounded-full'>
-					<img alt='Tailwind CSS chat bubble component' src={profilePic} />
-				</div>
-			</div>
-			<div className={`chat-bubble text-white ${bubbleBgColor}  pb-2`}>{message.message}</div>
-			<div className='chat-footer opacity-50 text-xs flex gap-1 items-center'>45.5</div>
-		</div>
-	);
+  return (
+    <div className={`chat ${chatClassName}`}>
+      <div className="chat-image avatar">
+        <div className="w-10 rounded-full">
+          <img
+            alt="User profile"
+            src={profilePic || DEFAULT_PROFILE_PIC}
+            onError={(event) => {
+              event.currentTarget.onerror = null;
+              event.currentTarget.src = DEFAULT_PROFILE_PIC;
+            }}
+          />
+        </div>
+      </div>
+      <div className={`chat-bubble text-white ${bubbleBgColor}  pb-2`}>
+        {message.message}
+      </div>
+      <div className="chat-footer opacity-50 text-xs flex gap-1 items-center">
+        45.5
+      </div>
+    </div>
+  );
 };
 export default Message;
